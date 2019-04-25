@@ -1,31 +1,39 @@
-# Question No 7
-test1=int(input("Enter Your Score For Test 1: "))
+import datetime
+date=datetime.datetime.now()
 
-test2=int(input("Enter Your Score For Test 2: "))
+day=date.day
+m=date.month
+y=date.year
+currentdate=str(day)+"/"+str(m)+"/"+str(y)
+currentdate2=currentdate.split("/")
 
-Mainexam=int(input("Enter Your Score For The Main Exam: "))
-
-Total_score=test1+test2+Mainexam
-
-if test1>25 or test1<0:
-    print("Invalid Score")
-
-elif test2>25 or test2<0:
-    print("Invalid Score")
-
-elif Mainexam>50 or Mainexam<0:
-    print("Invalid Score")
-
-if Mainexam<25:
-    print("Fail")
- 
-elif Total_score>80:
-        print("Distintion")
+d=input("Enter Date in Format dd/mm/yyyy : ")
+d1=d.split("/")
+if(d1[2]==currentdate2[2]):
     
-elif Total_score >=50 and Total_score<=59:
-        print("Pass")
-
-elif Total_score >=60 and Total_score<=79:
-        print("Credit")
-
-print("Total Score: ",Total_score)
+    
+    if(d1[1]==currentdate2[1]):
+        
+        
+        if(d1[0]==currentdate2[0]):
+            print("Date is Same :",d,"==",currentdate)
+        elif(int(d1[0])<int(currentdate2[0])):
+            print("Input  Date is Less from current Date :",d,"<",currentdate)
+        else:
+            print("Input  Date is Greater from current Date :",d,">",currentdate)
+            
+            
+            
+    elif(int(d1[1])<int(currentdate2[1])):
+       
+        print("Input  Date is less from current Date :",d,"<",currentdate)
+    elif(int(d1[1])>int(currentdate2[1])):
+        print("Input  Date is Greater from current Date :",d,">",currentdate)
+        
+        
+        
+elif(int(d1[2])<int(currentdate2[2])):
+    print("Input  Date is Less from current Date :",d,"<",currentdate)
+else:
+    print("Input  Date is Greater from current Date :",d,">",currentdate)
+  
