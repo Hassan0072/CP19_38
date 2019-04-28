@@ -1,0 +1,29 @@
+def hello():
+  Number=7
+  count=1
+  Guessnumber=int(input("Guess any number b/w 1 to 10:"))
+
+  while(Guessnumber!=Number):
+      print("incorrect")
+
+      if (Guessnumber>Number):
+          print("Too High")
+      else:
+          print("Too low")
+
+      Guessnumber=int(input("Guess any number b/w 1 to 10:"))
+      count+=1
+
+
+  print("you are correct")
+  print("Number of Guesses = ",count)
+  i="y"
+  if (Guessnumber==Number):
+    x=input("playagain:")
+    if (x==i):
+      hello()
+      print("play again")
+    else:
+      print(" Good Bye")
+
+hello()
