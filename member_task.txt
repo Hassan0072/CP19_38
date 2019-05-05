@@ -1,0 +1,3 @@
+Muhammad Hassan & Awais working on Client.
+Nabeegh Mumtaz & Noroz Usmani working on Server.
+Muhammad Ahsan working on tkinter.
