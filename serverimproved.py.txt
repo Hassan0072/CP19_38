@@ -1,0 +1,17 @@
+import socket
+
+s = socket.socket()
+host = socket.gethostname()
+port=8080
+s.bind((host,port))
+s.listen(1)
+
+conn, addr = s.accept()
+print(addr,"HAS connected to the network")
+
+filename = input(str("Filename : "))
+file = open(filename,"rb")
+filedata = file.read(1024)
+print(filedata)
+conn.send(filedata)
+print("file has been sent succesfully")
