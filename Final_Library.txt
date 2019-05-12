@@ -1,3 +1,4 @@
 Libraries.
 1) tkinter 
-2) PyQt5
+3) Socket
+4) os
